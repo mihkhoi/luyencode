@@ -1,20 +1,14 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-void solve(int n) {
-    int temp = 0;
-    string change;
-    while(n != 0) {
-        temp = n%10;
-        change += temp;
-        n /= 10;
-    }
-    cout << change;
-}
-
 int main() {
-    int n;
-    cin >> n;
-    solve(n);
+    string s;
+    cin >> s;
+    reverse(s.begin(), s.end());
+
+    int i = 0;
+    while (s[i] == '0')
+        i++;
+    cout << s.substr(i);
     return 0;
 }
